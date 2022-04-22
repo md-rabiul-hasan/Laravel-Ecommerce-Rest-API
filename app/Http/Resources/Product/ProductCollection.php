@@ -15,9 +15,9 @@ class ProductCollection extends JsonResource
     public function toArray($request)
     {
         return [
-            "name"     => $this->name,
-            "price"    => number_format($this->price,2),
-            "stock"    => $this->stock > 0 ? $this->stock : 'Out of Stock',
+            "name"    => $this->name,
+            "price"   => number_format($this->price,2),
+            "stock"   => $this->stock > 0 ? $this->stock : 'Out of Stock',
             "details" => [
                 "href" => route('products.show', $this->id)
             ]
